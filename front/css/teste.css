@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+
+body {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+#card {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.box {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 100px;
+
+}
+
+
+
+#dashboard {
+
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    /*width: 67%;
+    height: 57%;
+    */
+    flex-wrap: wrap;
+    width: 1200px;
+    height: 1000px;
+    border-radius: 15px;
+    padding: 0px;
+
+
+}
+
+.filtroGrafico {
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    background-color: RGB(3, 157, 216);
+    justify-content: center;
+}
+
+.tituloGrafico {
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+}
+
+select#selecfiltro,
+#selectmarca {
+
+    border: none;
+    border-style: none;
+
+    color: white;
+    /*cor da letra*/
+    outline: 0;
+    background-color: rgb(240, 125, 59);
+    /*cor do fundo*/
+    box-shadow: 50px 50px 50px (0, 0, 0, 0.06);
+    width: 200px;
+    /*Largura*/
+    border: none;
+    font-size: 10px;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 24;
+    appearance: none;
+}
+
+.grafcdinamic {
+    background-color: rgb(240, 125, 59);
+    /*cor do fundo*/
+    display: inline-block;
+    width: 35px;
+    /*Largura*/
+    height: 35px;
+    border: none;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 15px;
+
+
+
+}
+
+#img {
+    width: 20px;
+    height: 20px;
+    color: rgb(255, 255, 255);
+    right: 12px;
+    top: -10px;
+
+}
+
+#img2 {
+    width: 20px;
+    height: 20px;
+    color: rgb(255, 255, 255);
+    right: 12px;
+    top: -10px;
+}
+
+.excel {
+    background-color: rgb(240, 125, 59);
+    /*cor do fundo*/
+    box-shadow: 50px 50px 50px (0, 0, 0, 0.06);
+    width: 35px;
+    /*Largura*/
+    height: 35px;
+    border: none;
+    font-size: 10px;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 15px;
+
+    display: inline-block;
+
+}
+
+.graficoBotoes {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 70%;
+    border-radius: 0px 0px 15px 15px;
+
+}
+
+.botoesLaterais {
+    width: 100px;
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+/*botao  que inicia o popap*/
+
+#buttonOsklen,
+#buttonIntimissimi,
+#buttonCotton,
+#buttonAramis {
+    margin: 0;
+    background-color: rgb(3, 157, 216);
+    border-radius: 8px;
+    height: 700px;
+    width: 120px;
+    overflow: hidden;
+    cursor: rgb(255, 255, 255);
+    color: rgb(17, 5, 184);
+}
+
+/*efeito do botao inicia popap*/
+#buttonGraficoFiltro:hover {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+
+.graficoindica {
+    width: 80%;
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navLateral {
+    padding: 0;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navLateral {
+        display: none;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #card {
+        flex-wrap: wrap;
+    }
+}

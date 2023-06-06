@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal | SinFTE</title>
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../img/acento_agudo_sin_fte.png" type="image/x-con">
+    <link rel="stylesheet" href="../css/teste.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Osklenpopap.css">
+    <link rel="stylesheet" href="../css/popapsenha.css">
+</head>
+
+<body>
+
+
+    <div class="navLateral">
+        <nav>
+            <div>
+                <b href="#" class="logo">
+                    <img id=logo class="logo" src="../img/acento_agudo_sin_fte.png" />
+                    <img id=logofte class="logofte" src="../img/sin[fte]-logo-positivo-rgb.png" />
+                </b>
+            </div>
+
+            <ul class="menu">
+                <li class="active">
+                    <a href="dash.html">
+                        <i class='bx bxs-dashboard'></i>
+                        <span class="nav-item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class='bx bxs-key'></i>
+                        <span class="nav-item" id="open">Senha</span>
+
+                        <div id="fade" class="hide"></div>
+                        <div id="modal" class="hide">
+
+
+                            <form class="popaph2" onsubmit="alterar()">
+                                <input class="input_form" type="text" id="email" placeholder="E-mail" />
+                                <input class="input_form" type="text" id="atualPassword" placeholder="Senha Atual" />
+                                <input class="input_form" type="text" id="newPassword" placeholder="Confirmar Senha" />
+                                <button class="input_form" id="alterarSenhaButton" type="submit">alterar</button>
+                            </form>
+
+                        </div>
+
+                        <!--transparência de fundo ao pop-up ser aberto-->
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-detail'></i>
+                        <span class="nav-item">Relatórios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog'></i>
+                        <span class="nav-item">Configurações</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html" class="logout">
+                        <i class='bx bx-exit'></i>
+                        <span class="nav-item">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--Início do menu principal - Cards-->
+    <main class="container">
+
+
+        <section id="card">
+
+        </section>
+
+        <section id="dashboard">
+            <div class="filtroGrafico">
+                <div class="grafcdinamic">
+                    <i class='bx bxs-file-doc' id="img"></i>
+                </div>
+                <div class="excel">
+                    <i class='bx bxs-bar-chart-square' id="img2"></i>
+                </div>
+
+
+                <h3 class="tituloGrafico">Indicadores</h3>
+
+
+                <div id="filtroDiario">
+                    <select id="selecfiltro">
+                        <option id="filtro" value="hoje"> HOJE</option>
+                        <option id="filtro" value="estaSemana"> ESTA SEMANA</option>
+                        <option id="filtro" value="semanaPassada"> SEMANA PASSADA</option>
+                        <option id="filtro" value="estemes"> ESTE MÊS</option>
+                        <option id="filtro" value="mesPassado"> MÊS PASSADO</option>
+                    </select>
+                </div>
+
+                <h3 class="tituloGrafico"> Marcas</h3>
+                <div id="filtroDiario">
+
+                    <select id="selectmarca">
+                        <option disabled selected hidden value="todasmarcas">Marcas</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="graficoBotoes">
+                <div class="graficoindica">
+                    <canvas id="myChart" width="1500" height="800"></canvas>
+                </div>
+
+                <div class="botoesLaterais">
+                    <h2 class="hoje">Detalhes</h2>
+
+                    <button id="buttonOsklen">Osklen</button>
+                    <button id="buttonIntimissimi">Intimissimi</button>
+                    <button id="buttonAramis">Aramis</button>
+                    <button id="buttonCotton">Cotton</button>
+
+
+
+                    <div id="Parede" class="hide"></div>
+                    <div id="BlocoParede" class="hide">
+                        <button id="closex"></button>
+
+
+                        <table id="myTable">
+                            <thead>
+                                <tr class="coluna">
+                                    <th>Marca</th>
+                                    <th>Loja</th>
+                                    <th>Mensagem</th>
+                                    <th>Qte off</th>
+                                    <th>Indica erro</th>
+                                    <th>Data criacao</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <script>
+
+                            fetch('http://localhost:5257/api/Log/Empresa-marca?empresa=Osklen')
+                                .then(response => response.json())
+                                .then(data => {
+                                    const tableBody = document.querySelector('#myTable tbody');
+                                    data.forEach(user => {
+                                        const row = tableBody.insertRow();
+                                        row.insertCell().textContent = user.marcas;
+                                        row.insertCell().textContent = user.loja;
+                                        row.insertCell().textContent = user.mensagem;
+                                        row.insertCell().textContent = user.qte_off;
+                                        row.insertCell().textContent = user.indica_erro;
+                                        row.insertCell().textContent = user.data_criacao;
+                                    });
+                                });
+
+
+                        </script>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        window.onload = (event) => {
+            Grafico("hoje", 'todasmarcas')
+        }
+        // Acesse o elemento HTML que você deseja anexar o evento
+        var selecfiltro = document.getElementById("selecfiltro");
+        var selecmarcas = document.getElementById("selectmarca");
+
+
+        const geraGrafico = () => {
+            var valorFiltro = document.getElementById("selecfiltro").value;
+            var valormarca = document.getElementById("selectmarca").value;
+            Grafico(valorFiltro, valormarca)
+
+        }
+        // Anexe um evento de clique ao elemento
+        [selecfiltro, selecmarcas].forEach((el) => {
+
+
+
+            el.addEventListener("change", () => geraGrafico());
+
+        }
+
+        );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <script>
+
+        fetch('http://localhost:5257/api/Log/log-marcas-off-on')
+
+            .then(response => response.json())
+            .then(data => {
+                const marcas = data.map(item => item.marcas)
+                const qte_off = data.map(item => parseInt(item.qte_off))
+                const qte_on = data.map(item => parseInt(item.qte_on))
+
+                for (let i in marcas) {
+
+
+                    let card = document.getElementById("card");
+
+                    let div = document.createElement("div");
+                    div.classList.add('box');
+
+                    let h1 = document.createElement("h1");
+                    h1.classList.add('cardMarca');
+                    h1.innerHTML = marcas[i]
+
+                    let p1 = document.createElement("p");
+                    p1.classList.add('cardParagrafo')
+                    p1.innerHTML = 'Terminais online'
+
+                    let h2 = document.createElement("h2");
+                    h2.classList.add('cardOnline')
+                    h2.innerHTML = qte_on[i]
+
+
+                    let p2 = document.createElement("p");
+                    p2.classList.add('cardParagrafo');
+                    p2.innerHTML = 'Terminais offline';
+
+                    let h3 = document.createElement("h3");
+                    h3.classList.add('cardOff');
+                    h3.innerHTML = qte_off[i]
+
+
+                    div.appendChild(h1);
+                    div.appendChild(p1);
+                    div.appendChild(h2);
+                    div.appendChild(p2);
+                    div.appendChild(h3);
+                    card.appendChild(div);
+
+
+                    let option = document.createElement("option");
+
+                    option.id = marcas[i]
+                    option.innerHTML = marcas[i]
+
+                    let selectmarca = document.getElementById("selectmarca");
+
+                    selectmarca.appendChild(option)
+
+                }
+
+            })
+        /*
+            <div class="box">
+                <h1 id="cardMarca">Aramis</h1>
+                </br>
+                <p>Terminais online</p>
+                <h2 id="cardOnline">63</h2>
+                </br >
+                <p>Terminais offline</p>
+                <h3 id="cardOff">07</h3>
+            </div >
+        */
+
+        /*
+        <option id="filtro" value="estaSemana"> OSKLEN</option>
+        <option id="filtro" value="semanaPassada"> INTIMISSMI</option>
+        <option id="filtro" value="estemes"> ARAMIS</option>
+        <option id="filtro" value="mesPassado"> COTTON</option>
+        */
+
+
+
+
+
+
+
+    </script>
+    <script src="../js/notificacao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/alterasenha.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="../js/popapSenha.js" defer></script>
+    <script src="../js/input.js" defer></script>
+    <script src="../js/Osklenpopap.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="../js/Graficos.js" defer></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+/*O body do popap*/
+
+
+
+/*bloco preto que fica encima do dash e abaixo do popap parede pretaaaa*/
+#Parede {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+
+
+/*O popap*/
+
+#BlocoParede {
+    position: fixed;
+    left: 50%;
+    top: 0%;
+    background-color: #ebf2fa;
+    z-index: 10;
+    transform: translate(-50%, 50%);
+    width: 800px;
+    max-width: 90%;
+    padding: 100px;
+    border-radius: 50px;
+
+}
+
+/*h2 de dentro do popap*/
+.hist {
+    margin-top: 1rem;
+    color: #193553;
+}
+
+
+/*cabeçalho do popap de dentro*/
+
+
+/*botao dentro do popap*/
+
+
+
+/*O COMANDO A BAIXO FAZ COM QUE A PAREDE E A DIV SUMA quando clicada em algum lugar, e mostra os elementos da tela normal*/
+#BlocoParede.hide,
+#Parede.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+/*os codigos abaixo faz o que o bloco tenha uma animação sutil*/
+#Parede,
+#BlocoParede {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/*os codigos abaixo faz o que o bloco tenha uma animação sutil*/
+#BlocoParede.hide {
+    top: 0;
+
+}

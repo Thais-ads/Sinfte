@@ -1,0 +1,121 @@
+.main{
+    position: relative;
+    float: left;
+
+}
+
+.navBar{
+    background-color:transparent;
+    height: 100%;
+    width: 200px;
+    position: absolute;
+   
+}
+
+.aramis{
+    margin: 0;
+    position: absolute;
+    float: top;
+    width: 300px;
+    height: 350px;
+    left: 154px;
+    top: 30px;
+    
+    
+    width: calc(100% -260px);
+    left: 300px;
+
+    background:#FFFFFF;
+    border: 1px solid #fef8f8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.aramis:hover{
+    
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+    border-radius: 10px;
+}
+
+
+.intimissimi {
+margin: 0;
+position: absolute;
+width: 300px;
+height: 350px;
+left: 650px;
+top: 30px;
+
+
+
+background:#FFFFFF;
+border: 1px solid #fef8f8;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+
+.intimissimi:hover{
+border-radius: 10px;
+box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+
+.cotton {
+    margin: 0;
+    position: absolute;
+    width: 300px;
+    left: 1005px;
+    top: 30px;
+    height: 350px;;
+    
+    
+    
+    background:#FFFFFF;
+    border: 1px solid #5e5858;
+    box-shadow: 0px 4px 4px rgba(76, 70, 70, 0.25);
+    border-radius: 01px;
+    }
+    
+.cotton:hover{
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+        
+
+.osklen {
+    margin: 0;
+    position: absolute;
+    width: 296px;
+    left: 1370px;
+    border-radius: 10px;
+    top: 30px;
+    height: 350px;
+
+
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+.osklen:hover{
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+
+
+
+
+
+
+
+.graficoindica{
+    margin: 0;
+    position: absolute;
+    width: 1000px;
+    height: 380px;
+    left: 100px;
+    top:150px;
+
+}

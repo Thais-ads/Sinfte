@@ -1,0 +1,233 @@
+#dashboard {
+    margin: 30px;
+    position: absolute;
+    width: 1195px;
+    height: 543px;
+    left: 330px;
+
+
+    background: #FFFFFF;
+    border: 4px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 05px;
+    border: 1;
+}
+
+#dashboard:hover {
+    border-radius: 10px;
+    transition-delay: 500ms;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+#indica {
+    margin: 0;
+    position: absolute;
+    width: 120px;
+    height: 25px;
+    left: 0px;
+    top: 4px;
+
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+
+#indic {
+    margin: 0;
+    position: absolute;
+    width: 120px;
+    height: 25px;
+    left: 0px;
+    top: 4px;
+
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+#totalMaq {
+    position: absolute;
+    height: 16px;
+    left: 0px;
+    top: 54px;
+
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+
+#totalManu {
+    position: absolute;
+    height: 16px;
+    left: 165px;
+    top: 54px;
+
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+#botaoFiltro {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    left: 521px;
+    top: 0px;
+    background: #F5854F;
+    border-radius: 10px;
+}
+
+#botaoFiltro:hover {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+
+#botaoGrafico {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    left: 574px;
+    top: 0px;
+    background: #F5854F;
+    border-radius: 10px;
+}
+
+#botaoGrafico:hover {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+
+#filtroDiario,
+#filtroMarcas {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    position: absolute;
+    width: 150px;
+    height: 38px;
+    left: 627px;
+    top: 0px;
+    border-radius: 10px;
+
+}
+
+#txtHoje {
+    position: absolute;
+    width: 45px;
+    height: 19px;
+    left: 1134px;
+    top: 463px;
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.botoesLaterais {
+    margin: 0;
+    line-height: 100px;
+    color: rgb(255, 255, 255);
+    /*Cor do Texto*/
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 10px
+}
+
+.hoje {
+    color: #193553;
+}
+
+/* :) */
+
+
+#contOsklen {
+    margin: 0;
+    background-color: rgb(3, 157, 216);
+    border-radius: 8px;
+    height: 80px;
+    width: 180px;
+
+}
+
+#contOsklen:hover {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+#Intimissimi {
+    margin: 0;
+    background-color: rgb(3, 157, 216);
+    border-radius: 8px;
+    height: 80px;
+    width: 180px;
+    margin-top: 10%;
+}
+
+#Intimissimi:hover {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+
+
+#Aramis {
+    margin: 0;
+    background-color: rgb(3, 157, 216);
+    border-radius: 8px;
+    height: 80px;
+    width: 180px;
+    margin-top: 10%;
+}
+
+#Aramis:hover {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+
+#Cotton {
+    margin: 0;
+    background-color: rgb(3, 157, 216);
+    border-radius: 8px;
+    height: 80px;
+    width: 180px;
+    margin-top: 10%;
+
+}
+
+#Cotton:hover {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
